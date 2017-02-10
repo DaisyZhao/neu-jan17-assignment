@@ -1,3 +1,7 @@
+/*
+score: 10
+comments: perfect work!
+*/
 /**
  * @author Xueying Zhao
  */
@@ -44,7 +48,7 @@ public class Assignment2 {
      * If the salary is more than 8900, the Social Security Tax is 6.2% of 106,800.
      */
 
-    public double socialSecurityTax(Employee employee) {
+    public double socialSecurityTax(Employee employee) {                            //correct
         double socialSecTax;
 
         if (employee.salary <= 8900) {
@@ -65,8 +69,8 @@ public class Assignment2 {
      * If the employee is between 50 and 60(exclusive), rate is 5% of salary; If the employee is above 60,
      * rate is 6% of salary.
      */
-    public double insuranceCoverage(Employee employee) {
-        double contributionInsurance = 0;
+    public double insuranceCoverage(Employee employee) {                              //correct
+        double contributionInsurance = 0; 
 
         if (employee.age < 35) {
             contributionInsurance = 0.03 * employee.salary;
@@ -87,7 +91,7 @@ public class Assignment2 {
      * For example, Alice's salary is 1000, John's salary is 500, Jenny's salary is 1200, you should print:
      * John Alice Jenny
      */
-    public void sortSalary(Employee e1, Employee e2, Employee e3) {
+    public void sortSalary(Employee e1, Employee e2, Employee e3) {                  //correct
 
         String message = "Salary from low to high: ";
 
@@ -114,7 +118,7 @@ public class Assignment2 {
      * Do not change the input of this method.
      * Try to add a new method in Employee class: public void raiseSalary(double byPercent)
      */
-    public void tripleSalary(Employee employee) {
+    public void tripleSalary(Employee employee) {                    //correct                
         employee.raiseSalary(2);
     }
 
@@ -124,7 +128,7 @@ public class Assignment2 {
     /**
      * Write a method to determine whether a number is prime
      */
-    public boolean isPrime(int n) {
+    public boolean isPrime(int n) {                                //correct
         if (n <= 1) {
             return false;
         }
@@ -141,7 +145,7 @@ public class Assignment2 {
      * result has only one digit. For example: Given n = 38, the process is
      * like: 3 + 8 = 11, 1 + 1 = 2. Since 2 has only one digit, return it.
      */
-    public int addDigits(int n) {
+    public int addDigits(int n) {                 //correct
         int digit = 0;
 
         while (n != 0) {
@@ -164,7 +168,7 @@ public class Assignment2 {
      * another prime factor 7. Note that 1 is typically treated as an ugly
      * number.
      */
-    public boolean isUgly(int n) {
+    public boolean isUgly(int n) {              //correct
 
         if (n <= 0) {
             return false;
@@ -197,6 +201,7 @@ public class Assignment2 {
      * There is no change after swap()! Do you know the reason why my swap failed?
      * Write your understanding of the reason and explain it.
      *
+     //correct
      /** Java copies and passes reference by value. In the main() method, a and b are object references.
      When Java passes a and b to the swap() method, it actually copies the original references.
      It means that a and x point to the same object, while b and y point to the same object.
