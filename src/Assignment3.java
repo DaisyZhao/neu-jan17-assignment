@@ -1,3 +1,7 @@
+/*
+score: 10 + 2 = 10(the total score will be no more than 10)
+comments: Your code is really impressive!! Keep doing!
+*/
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
@@ -17,7 +21,7 @@ public class Assignment3 {
      *  Given an array, reverse the elements within this array and print the result
      *  eg, given{1,2,3,4}, print{4,3,2,1}
      */
-    public void reverseArray(int[] nums) {
+    public void reverseArray(int[] nums) {                  //correct
         int temp;
 
         for (int i = 0; i < nums.length / 2; i++) {
@@ -38,7 +42,7 @@ public class Assignment3 {
      *  The digits are stored such that the most significant digit is at the head of the array.
      *  eg, given {1,2,9}, return{1,3,0}.
      */
-    public int[] plusOne(int[] digits) {
+    public int[] plusOne(int[] digits) {            //correct
 
         // make a copy of the input digits
         int[] result = digits.clone();
@@ -71,7 +75,7 @@ public class Assignment3 {
      *  Write a program that takes an integer as input and returns all the primes between 1 and that integer(inclusive).
      *  eg, input is 18, you should return{2,3,5,7,11,13,17}
      */
-    public int[] generatePrimes(int n) {
+    public int[] generatePrimes(int n) {               //correct
 
         List<Integer> primeList = new ArrayList<>();
 
@@ -112,7 +116,7 @@ public class Assignment3 {
      *  to isSubstring
      *  eg, "pineapple" is a rotation of "neapplepi"
      */
-    public boolean isRotation(String s1, String s2) {
+    public boolean isRotation(String s1, String s2) {                    //correct
         String doubleS1 = s1 + s1;
         // If String s2 is a rotation of s1, then s2 must be the substring of s1 concatenated by s1.
         if (isSubstring(doubleS1, s2)){
@@ -134,14 +138,14 @@ public class Assignment3 {
      *  Given two strings, write a method to decide if one is a permutation of the other
      *  hint: the comparison is case sensitive and whitespace is significant
      */
-    public boolean isPermutation(String s1, String s2) {
+    public boolean isPermutation(String s1, String s2) {           //correct
 
         if (s1.length() != s2.length()) {
             return false;
         } else {
             int[] charNum = new int[128];
 
-            for (int i = 0; i < 128; i++) {
+            for (int i = 0; i < 128; i++) {                         //no need to do these, because the initial value of int is 0
                 charNum[i] = 0;
             }
 
@@ -167,7 +171,7 @@ public class Assignment3 {
      *  the string to be encoded consists of letters of the alphabet, with no digits, and the string to be
      *  decoded is a valid encoding.
      */
-    public static String encoding(String s) {
+    public static String encoding(String s) {                   //correct
 
         if (s.length() == 0) {
             return "";
@@ -216,7 +220,7 @@ public class Assignment3 {
      *                    7,8,9           9 6 3
      * tip: image could be a square or a rectangle.
      */
-    public void rotate(int[][] matrix) {
+    public void rotate(int[][] matrix) {              //correct
         int row = matrix.length;
         int col = matrix[0].length;
 
@@ -241,7 +245,7 @@ public class Assignment3 {
      * intput is not valid, return -1. A valid parentheses is "()". For example, given "(())", return 2;
      * given "(()))", return -1.
      */
-     public int countValidParentheses(String s) {
+     public int countValidParentheses(String s) {          //awesome!!!
          Stack<Character> st = new Stack<>();
          int bracketCount = 0;
 
