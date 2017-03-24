@@ -9,7 +9,7 @@ public class MidtermExam {
     /**
      * Question 1: reverse the order of elements in an ArrayList<E> without creating a new ArrayList
      */
-    public static <E> void reverse(ArrayList<E> list) {
+    public static <E> void reverse(ArrayList<E> list) {                //correct
         for (int i = 0; i < list.size(); i++) {
             for (int j = 0; j < list.size() - i - 1; j++) {
                 list.add(list.remove(i));
@@ -23,7 +23,7 @@ public class MidtermExam {
      *
      * Solution A
      */
-    public static String generateStrings(String s1, String s2) {
+    public static String generateStrings(String s1, String s2) {       //correct
         Set<String> resultSet = new TreeSet<>();
 
         for (int i = 0; i < s1.length(); i++) {
@@ -60,7 +60,7 @@ public class MidtermExam {
     /**
      * Question 3: find the single element from an array of integers
      */
-    public static int singleNumber(int[] nums) {
+    public static int singleNumber(int[] nums) {          //correct
         Arrays.sort(nums);
 
         for (int i = 0; i < nums.length - 1; i++) {
@@ -76,7 +76,7 @@ public class MidtermExam {
     /**
      * Question 4: find indices of the two numbers such that they add up to a specific target
      */
-    public int[] twoSum(int[] nums, int target) {
+    public int[] twoSum(int[] nums, int target) {          //correct
         Map<Integer, Integer> map = new HashMap<>();
         int[] position = new int[2];
 
@@ -95,7 +95,7 @@ public class MidtermExam {
     /**
      * Extra credit: return the kth row of the Pascal's triangle
      */
-    public List<Integer> getRow(int rowIndex) {
+    public List<Integer> getRow(int rowIndex) {                     //correct
         List<Integer> listOfRow = new ArrayList<>();
         if (rowIndex == 0) {
             listOfRow.add(1);
