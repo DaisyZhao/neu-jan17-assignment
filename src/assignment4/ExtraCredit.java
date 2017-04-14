@@ -1,3 +1,8 @@
+/*
+score: 9 + 2
+comments: great job! Keep doing that!
+*/
+
 package assignment4;
 
 /**
@@ -6,7 +11,7 @@ package assignment4;
 public class ExtraCredit {
     // 1. Given an array containing n distinct numbers taken from 0, 1, 2 …, n, find the one that is missing from the array.
     // For example, given nums = {0, 1, 3}, return 2.
-    public static int missingNumber(int[] nums) {
+    public static int missingNumber(int[] nums) {              //correct
         int result = nums[0];
         for (int i = 1; i < nums.length; i++) {
             result = result ^ nums[i];
@@ -23,7 +28,7 @@ public class ExtraCredit {
     // the non-zero elements. For example, given nums = {0, 1, 0, 3, 12}, after calling your function,
     // nums should be {1, 3, 12, 0, 0}, You must do this in-place without making a copy of the array.
 
-    public static void moveZeroes(int[] nums) {
+    public static void moveZeroes(int[] nums) {                                     //correct
         for (int i = nums.length - 1; i >= 0; i--) {
             if (nums[i] == 0) {
                 for (int j = i; j < nums.length-1; j++) {
@@ -37,7 +42,7 @@ public class ExtraCredit {
     // 3.Given a non-empty array of integers, return the third maximum distinct number in this array. If it does not exist,
     // return the maximum number. For example, given{3,2,1}, return 1; given{1,2}, return 2; given{2,2,3,1}, return 1.
 
-    public static int thirdMax(int[] nums) {
+    public static int thirdMax(int[] nums) {               //missing one corner case: if nums is [1,2,-2147483648], your output is 2, but the answer is -2147483648
         int max1 = Integer.MIN_VALUE;
         int max2 = Integer.MIN_VALUE;
         int max3 = Integer.MIN_VALUE;
